@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Nav } from './Navbar.styles'
-import { StyledLink } from './Navbar.styles'
+import { StyledLink, LinkedinIcon, GithubIcon, Wrapper, Nav,StyledLogo,IconsWrapper,Links  } from './Navbar.styles'
 import { useEffect } from 'react'
-import { Wrapper } from './Navbar.styles'
+
 
 const Navbar = () => {
 
@@ -25,10 +24,10 @@ const Navbar = () => {
 		<Nav  >
 			<div>
 				<Link href='/' passHref>
-					<StyledLink>Jakub Karbowski</StyledLink>
+					<StyledLogo>Jakub Karbowski</StyledLogo>
 				</Link>
                 </div>
-                <div>
+                <Links>
                 <Link href='/' passHref>
 					<StyledLink>About</StyledLink>
 				</Link>
@@ -38,7 +37,15 @@ const Navbar = () => {
                 <Link href='/' passHref>
 					<StyledLink>Contact</StyledLink>
 				</Link>
-			</div>
+				<IconsWrapper>
+				<Link href='/' passHref>
+					<LinkedinIcon/>
+				</Link>
+				<Link href='/' passHref>
+					<GithubIcon/>
+				</Link>
+				</IconsWrapper>
+			</Links>
 		</Nav>
 		</Wrapper>
 		

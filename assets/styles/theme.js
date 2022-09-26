@@ -1,10 +1,13 @@
 export const theme = {
     colors: {
-      white: '#FFFFFF',
-      black: '#040404',
-      grey:'#808080'
+      white: '#FCFCFC',
+      black: '#161925',
+      grey:'#9BB6BF',
+      blue:'#3A86FF',
+      purple:'#A68C9C'
     },
     fontSize: {
+      xxxl: '44px',
       xxl: '34px',
       xl: '24px',
       l: '17px',
