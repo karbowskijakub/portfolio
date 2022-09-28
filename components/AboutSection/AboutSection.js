@@ -1,11 +1,13 @@
 import React from 'react'
-import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle} from './AboutSection.styles'
-import Image from 'next/image'
+import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle,ImageStyle,Shape} from './AboutSection.styles'
+
 
 const AboutSection = () => {
 	return (
 		<Wrapper>
+			
 			<Container>
+			<Shape/>
 				<Title>
 					<h1>About Me</h1>
 				</Title>
@@ -24,7 +26,7 @@ const AboutSection = () => {
 				<TechStack>
                 <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle src={require('../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Javascript</p>
@@ -32,58 +34,58 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/ts.svg')} alt='logo' width={45} height={45} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Typescript</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/node.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Node.js</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/react.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>React.js</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/next.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Next.js</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/redux.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Redux</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/framer.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Framer</p>
 						</ParagraphContainer>
 					</Element>
                     <Element>
 						<IconContainer>
-                        <Image src={require('../../assets/img/logo-javascript.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../assets/img/IconsAbout/git.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
-							<p>Javascript</p>
+							<p>Git</p>
 						</ParagraphContainer>
 					</Element>
 				</TechStack>

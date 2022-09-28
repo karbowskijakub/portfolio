@@ -62,7 +62,7 @@ transition: all 0.3s;
 `
 export const StyledLogo = styled.a`
 font-size: ${({ theme }) => theme.fontSize.xl};
-padding:0;
+padding:0 1em;
 left:0;
 text-decoration:none;
 color:black;

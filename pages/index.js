@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeroContainer from '../components/HeroContainer/HeroContainer'
 import AboutSection from '../components/AboutSection/AboutSection'
-
+import Projects from'../components/ProjectsSection/Projects'
 export default function Home() {
   return (
     <>
@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
 <HeroContainer/>
 <AboutSection/>
+<Projects/>
 </>
   )
 }

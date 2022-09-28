@@ -16,7 +16,7 @@ font-size:15px;
 margin-top:0.5em;
 border:none;
 overflow:hidden;
-z-index:5;
+z-index:0;
 max-width:300px;
 transition: color 1s ease-out;
 &:hover{

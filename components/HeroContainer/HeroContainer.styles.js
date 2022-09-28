@@ -11,7 +11,7 @@ height:900px;
 export const Background = styled.div`
 height:100%;
 background-color:${({ theme }) => theme.colors.grey};
-width:550px;
+width:520px;
 
 
 `
@@ -33,7 +33,9 @@ text-direction:left;
 display:flex;
 justify-content:center;
 flex-direction:column;
+padding: 0 1em;
 max-width:500px;
+
 
 
 `
@@ -63,12 +65,12 @@ margin-top:0;
 export const ImgContainer = styled.div`
 position:absolute;
 bottom:0;
-right:12em;
+right:10em;
 `
 export const SymbolsContainer = styled.div`
 position:absolute;
 bottom:18em;
-right:16em;
+right:14em;
 filter: invert(53%) sepia(43%) saturate(5099%) hue-rotate(200deg) brightness(98%) contrast(165%);
 
 `
