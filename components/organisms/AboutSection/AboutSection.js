@@ -26,7 +26,7 @@ const AboutSection = () => {
 				<TechStack>
                 <Element>
 						<IconContainer>
-                        <ImageStyle src={require('../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
+                        <ImageStyle src={require('../../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Javascript</p>
@@ -34,7 +34,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/ts.svg')} alt='logo' width={45} height={45} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/ts.svg')} alt='logo' width={45} height={45} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Typescript</p>
@@ -42,7 +42,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/node.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/node.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Node.js</p>
@@ -50,7 +50,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/react.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/react.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>React.js</p>
@@ -58,7 +58,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/next.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/next.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Next.js</p>
@@ -66,7 +66,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/redux.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/redux.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Redux</p>
@@ -74,7 +74,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/framer.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/framer.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Framer</p>
@@ -82,7 +82,7 @@ const AboutSection = () => {
 					</Element>
                     <Element>
 						<IconContainer>
-                        <ImageStyle  src={require('../../assets/img/IconsAbout/git.svg')} alt='logo' width={50} height={50} />
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/git.svg')} alt='logo' width={50} height={50} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Git</p>

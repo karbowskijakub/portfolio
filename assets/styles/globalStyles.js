@@ -10,6 +10,7 @@ import { createGlobalStyle } from 'styled-components';
   }
   
   body {
+    background:${({ theme }) => theme.colors.white};
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;

@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import HeroContainer from '../components/HeroContainer/HeroContainer'
-import AboutSection from '../components/AboutSection/AboutSection'
-import Projects from'../components/ProjectsSection/Projects'
+import HeroContainer from '../components/organisms/HeroContainer/HeroContainer'
+import AboutSection from '../components/organisms/AboutSection/AboutSection'
+import Projects from'../components/organisms/ProjectsSection/Projects'
+import Contact from '../components/organisms/ContactSection/Contact'
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
 <HeroContainer/>
 <AboutSection/>
 <Projects/>
+<Contact/>
 </>
   )
 }

@@ -5,7 +5,7 @@ import {AiOutlineLink} from 'react-icons/ai';
 // import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox} from './Projects.styles'
 
 export const Wrapper = styled.div`
-margin-top:8em;
+margin-top:4em;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -16,12 +16,15 @@ background:#F3F4F6;
 
 export const Container = styled.div`
 margin-bottom:7em;
-width: 1240px;
+width: 1200px;
 display:flex;
 justify-content:center;
 flex-direction:column;
 align-items:center;
-
+padding:0 4em;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius:8px;
+background:${({ theme }) => theme.colors.white};
 `
 export const TitleContainer = styled.div`
 height:10em;
@@ -40,10 +43,11 @@ border-radius:8px;
 overflow:hidden;
 
 
+
 `
 export const InfoBox = styled.div`
-padding:3em;
-max-width:500px;
+padding:3em 2em;
+max-width:400px;
 h1{
     margin:0;
 }
@@ -57,7 +61,7 @@ p{
 }
 `
 export const ButtonsBox = styled.div`
-margin-top:2em;
+margin-top:6em;
 
 `
 export const ButtonsDiv = styled.div`
@@ -121,13 +125,18 @@ export const ImageBox = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-min-width:600px;
-min-height:412px;
+width:100%;
+height:100%;
+padding:3em 0;
+
 `
 export const ImageContainer = styled.div`
 
+width:100%;
+height:100%;
 border-radius:10px;
 overflow:hidden;
+
 `
 
 export const Share =styled(AiOutlineLink)`

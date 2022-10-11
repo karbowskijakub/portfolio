@@ -7,8 +7,9 @@ export const Wrapper = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-max-width:100%;
+width:100%;
 height:700px;
+background:${({ theme }) => theme.colors.white};
 
 `
 export const Container = styled.div`
@@ -31,7 +32,7 @@ align-items:center;
 
 `
 export const TechStack =styled.div`
-min-width:100%;
+width:100%;
 height:100%;
 grid-row: 2/3;
 grid-column: 2/2;
@@ -46,7 +47,7 @@ export const InfoContainer =styled.div`
 grid-row: 2/3;
 grid-column: 1/2;
 height:100%;
-max-width:400px;
+width:400px;
 display:flex;
 align-items:center;
 padding: 0 4em;
@@ -66,7 +67,7 @@ align-items:center;
 export const IconContainer =styled.div`
 background-color: ${({ theme }) => theme.colors.grey};;
 height:50%;
-min-width:100px;
+width:100px;
 border-radius:50%;
 display:flex;
 justify-content:center;
@@ -84,7 +85,7 @@ display:flex;
 align-items:center;
 `
 export const TechContainer =styled.div`
-min-width:600px;
+width:600px;
 `
 export const StackTitle = styled.h3
 `
