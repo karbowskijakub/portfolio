@@ -92,7 +92,7 @@ display: inline-block;
 
 `
 export const Links =styled.div`
-
+z-index:200;
 display:flex;
 align-items:center;
 justify-content:center;

@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components'
+import breakpoints from '../../breakpoints/breakpoints';
 
 import Image from 'next/image'
 export const Wrapper = styled.div`
@@ -21,13 +22,15 @@ right:0;
 
 export const Container = styled.div`
 height:100%;
-width:1400px;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 flex-direction: row;
 position:relative;
-
+@media only screen and ${breakpoints.device.lg}{
+  width:1200px;
+}
 
 `
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-
+import breakpoints from '../../breakpoints/breakpoints'
 import {TbSquareRotated} from "react-icons/tb"
 
 export const Wrapper = styled.div`
@@ -8,24 +8,36 @@ display:flex;
 justify-content:center;
 align-items:center;
 width:100%;
-height:700px;
+
 background:${({ theme }) => theme.colors.white};
+
+`
+export const TwoContainers = styled.div`
+display:flex;
+flex-direction:column;
+@media only screen and ${breakpoints.device.lg}{
+    flex-direction:row;
+}
+
 
 `
 export const Container = styled.div`
 height:80%;
-width:1200px;
-display: grid;
-grid-template-row:  1fr 3fr;
-grid-template-column:  1fr 1fr;
+width:100%;
+display:flex;
+justify-content:center;
+flex-direction:column;
+align-items:center;
 position:relative;
 margin-bottom:7em;
 margin-top:10em;
+@media only screen and ${breakpoints.device.lg}{
+    width:1200px;
+ }
 
 `
 export const Title =styled.div`
-grid-row: 1/1;
-grid-column: 1/3;
+
 display:flex;
 justify-content:center;
 align-items:center;
@@ -35,11 +47,11 @@ export const TechStack =styled.div`
 width:100%;
 height:100%;
 grid-row: 2/3;
-grid-column: 2/2;
-display: grid;
-gap:5px;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
+    grid-column: 2/2;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
 
 `
@@ -47,12 +59,15 @@ export const InfoContainer =styled.div`
 grid-row: 2/3;
 grid-column: 1/2;
 height:100%;
-width:400px;
+width:100%;
 display:flex;
 align-items:center;
 padding: 0 4em;
 font-size:  ${({ theme }) => theme.fontSize.l};
 
+@media only screen and ${breakpoints.device.lg}{
+   width:400px;
+}
 
 `
 
@@ -85,7 +100,12 @@ display:flex;
 align-items:center;
 `
 export const TechContainer =styled.div`
-width:600px;
+width:100%;
+height:400px;
+@media only screen and ${breakpoints.device.lg}{
+    width:600px;
+ }
+
 `
 export const StackTitle = styled.h3
 `

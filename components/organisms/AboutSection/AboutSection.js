@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle,ImageStyle,Shape} from './AboutSection.styles'
+import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle,ImageStyle,Shape,TwoContainers} from './AboutSection.styles'
 
 
 const AboutSection = () => {
@@ -11,6 +11,7 @@ const AboutSection = () => {
 				<Title>
 					<h1>About Me</h1>
 				</Title>
+				<TwoContainers>
 				<InfoContainer>
                 
                     <p>
@@ -90,6 +91,7 @@ const AboutSection = () => {
 					</Element>
 				</TechStack>
                 </TechContainer>
+				</TwoContainers>
 			</Container>
 		</Wrapper>
 	)

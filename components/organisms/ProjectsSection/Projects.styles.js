@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import {AiFillGithub} from 'react-icons/ai';
 import {AiOutlineLink} from 'react-icons/ai';
+import breakpoints from '../../breakpoints/breakpoints'
 // import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox} from './Projects.styles'
 
 export const Wrapper = styled.div`
@@ -16,7 +17,7 @@ background:#F3F4F6;
 
 export const Container = styled.div`
 margin-bottom:7em;
-width: 1200px;
+width: 100%;
 display:flex;
 justify-content:center;
 flex-direction:column;
@@ -25,6 +26,9 @@ padding:0 4em;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius:8px;
 background:${({ theme }) => theme.colors.white};
+@media only screen and ${breakpoints.device.lg}{
+    width: 1200px;
+ }
 `
 export const TitleContainer = styled.div`
 height:10em;
@@ -37,11 +41,14 @@ align-items:center;
 
 export const ProjectContainer = styled.div`
 display:flex;
-flex-direction:row;
+flex-direction:column;
 background:${({ theme }) => theme.colors.white};
 border-radius:8px;
 overflow:hidden;
 
+@media only screen and ${breakpoints.device.md}{
+    flex-direction:row;
+ }
 
 
 `
