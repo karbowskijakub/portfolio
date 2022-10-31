@@ -78,11 +78,12 @@ flex-direction:row;
 
 `
 export const FirstButton = styled.button`
+padding:0.3em 0.5em;
 display:flex;
 justify-content:center;
 align-items:center;
 margin-right:1em;
-padding:0.8em 2em;
+
 text-transform:uppercase;
 background-color:${({ theme }) => theme.colors.black};
 color:${({ theme }) => theme.colors.white};
@@ -93,14 +94,17 @@ border:none;
 &:hover{
     background-color:${({ theme }) => theme.colors.blue};
 }
+@media only screen and ${breakpoints.device.xxs}{
+    padding:0.8em 2em;
+ }
 
 `
 export const SecondButton = styled.button`
+padding:0.3em 0.5em;
 text-transform:uppercase;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:0.8em 2em;
 background-color:${({ theme }) => theme.colors.black};
 color:${({ theme }) => theme.colors.white};
 border-radius:5px;
@@ -110,6 +114,9 @@ border:none;
 &:hover{
     background-color:${({ theme }) => theme.colors.blue};
 }
+@media only screen and ${breakpoints.device.xxs}{
+    padding:0.8em 2em;
+ }
 
 `
 

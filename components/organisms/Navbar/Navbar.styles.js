@@ -219,7 +219,7 @@ export const Container = styled.div`
 position:relative;
 width:100%;
 height:100%;
-z-index:20000;
+z-index:10000;
 `
 
 export const StyledLinkMobile = styled.a`

@@ -50,9 +50,14 @@ grid-row: 2/3;
     grid-column: 2/2;
     display: grid;
     gap:5px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 
+
+    @media only screen and ${breakpoints.device.xs}{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 
 `
 export const InfoContainer =styled.div`
@@ -81,16 +86,20 @@ align-items:center;
 `
 export const IconContainer =styled.div`
 background-color: ${({ theme }) => theme.colors.grey};;
-height:50%;
-width:100px;
+height:100%;
+width:70px;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-transition: 0.8s all;
+transition: background-color 0.8s ease;
 &:hover{
     background-color: ${({ theme }) => theme.colors.blue};
 }
+@media only screen and ${breakpoints.device.xs}{
+    height:50%;
+    width:100px;
+ }
 
 
 `

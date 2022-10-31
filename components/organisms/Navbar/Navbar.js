@@ -4,10 +4,10 @@ import { StyledLink, LinkedinIcon, GithubIcon, Wrapper, Nav,StyledLogo,IconsWrap
 import { useEffect } from 'react'
 
 
-const Navbar = () => {
+const Navbar = ({isOpen,setOpen}) => {
 
 
-	const[isOpen,setOpen] = useState(false)
+
 	const [navbar,setNavbar]=useState(false);
 
 

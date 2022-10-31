@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {Button} from '../../atoms/Button/Button'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import breakpoints from '../../breakpoints/breakpoints'
 
 export const BoxDiv = styled(Box)`
 padding: 1.3em 1.3em;
@@ -126,7 +127,7 @@ position:relative;
 export const Background = styled.div`
 height:100%;
 background-color:${({ theme }) => theme.colors.grey};
-min-width:30%;
+width:30%;
 position:absolute;
 left:0;
 z-index:2;
@@ -139,8 +140,17 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 height:80%;
-width:80%;
+width:85%;
 z-index:5;
+@media only screen and ${breakpoints.device.xs}{
+  width:65%;
+}
+@media only screen and ${breakpoints.device.md}{
+  width:80%;
+}
+@media only screen and ${breakpoints.device.md}{
+  width:80%;
+}
 
 `
 export const TitleDiv = styled.div`
@@ -151,17 +161,23 @@ justify-content:center;
 
 `
 export const ContactBox = styled.div`
+width:100%;
+height:100%;
 display:flex;
 flex-direction:row;
 align-items:center;
 justify-content:center;
-height:80%;
+
 
 
 `
 export const ImageDiv = styled.div`
-width:60%;
-
+width:100%;
+height:100%;
+display:none;
+@media only screen and ${breakpoints.device.md}{
+  display:block;
+}
 
 `
 

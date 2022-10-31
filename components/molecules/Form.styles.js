@@ -3,10 +3,12 @@ import Image from 'next/image'
 import {Button} from '../atoms/Button/Button'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import breakpoints from '../breakpoints/breakpoints'
+
 
 export const BoxDiv = styled(Box)`
-padding: 1.3em 1.3em;
-width:40%;
+padding:0;
+width:100%;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -15,14 +17,23 @@ height:80%;
 background: transparent;
 backdrop-filter: blur(5px);
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-margin-right:5em;
-border-radius:8px;
 
+border-radius:8px;
+@media only screen and ${breakpoints.device.xss}{
+  padding: 1.5em 1em;
+}
 button {
-display:flex;
-justify-content:center;
-align-items:center;
-padding:1em 2em;
+  @media only screen and ${breakpoints.device.xss}{
+    padding:1em 2em;
+    width:100% ;
+  }
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:100%;
+margin-top:4em;
 text-transform:uppercase;
 background-color:${({ theme }) => theme.colors.black};
 color:${({ theme }) => theme.colors.white};
@@ -36,9 +47,11 @@ border:none;
 }
 
 
+
 `
 export const Text = styled(TextField)`
 width:100%;
+
 & label.Mui-focused {
   
     color: ${({ theme }) => theme.colors.black};
@@ -66,6 +79,7 @@ width:100%;
 export const TextArea = styled(TextField)`
 
 width:100%;
+
 & label.Mui-focused {
   color: ${({ theme }) => theme.colors.black};
 }
@@ -93,8 +107,9 @@ width:100%;
 
 `
 export const InputBlock = styled.div`
-min-height:18%;
+min-height:5em;
 width:100%;
+
 `
 
 

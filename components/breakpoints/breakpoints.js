@@ -1,7 +1,8 @@
 const size = {
-    xss: '0px',
+    xss: '400px',
     xs: '576px',
-    sm:'768px',
+    sm:'850px',
+
     md: '992px',
     lg: '1200px',
     xl: '1400px',

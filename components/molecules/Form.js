@@ -35,11 +35,12 @@ const Form = () => {
       component="form"
 	  onSubmit={handleSubmit(onSubmit)}
       sx={{
-        '& > :not(style)': { m: 2, width: '30ch' },
+        '& > :not(style)': { m: 3, width: '20ch' },
       }}
       noValidate
       autoComplete="off"
     >
+		<div>
 		<InputBlock>
       <Text  type="text" name="name" id="name"  label="name"  variant="standard"
 	  {...register("name",{required:"Required field"})}
@@ -77,6 +78,7 @@ const Form = () => {
 		  />
 		  </InputBlock>
 	  <button type="submit">Submit</button>
+	  </div>
     </BoxDiv>
     )
 }
