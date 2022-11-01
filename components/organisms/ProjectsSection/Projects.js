@@ -2,15 +2,49 @@ import React from 'react'
 import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox,ImageContainer,Share,GitHub} from './Projects.styles'
 import Image from 'next/image'
 import Link from 'next/link'
+import {slideLeft,slideRight} from '../../animations/animations';
+import { useInView } from 'react-intersection-observer';
+import {  useAnimation } from 'framer-motion'
 const Projects = () => {
+
+	const [ref, inView ] = useInView({ threshold: 0.5 })
+const [ref2, inView2 ] = useInView({ threshold: 0.5 })
+const [ref3, inView3 ] = useInView({ threshold: 0.5 })
+	const animationControls = useAnimation()
+	const animationControlsSecond = useAnimation()
+	const animationControlsThird = useAnimation()
+  
+	if (inView) {
+	  animationControls.start('animate')
+	}
+	if (inView2) {
+		animationControlsSecond.start('animate')
+	  }
+	  if (inView3) {
+		animationControlsThird.start('animate')
+	  }
+  
+
+  
+
+
 	return (
-		<Wrapper>
+		
+		<Wrapper
+
+		>
             <TitleContainer>
 					<h1>Projects</h1>
 				</TitleContainer>
-			<Container>
-				<ProjectContainer>
-					<InfoBox>
+			<Container 
+			ref={ref}
+			variants={ slideRight}
+			initial='initial'
+			custom={{ duration: 1.1 }}
+			animate={animationControls}
+	>
+				<ProjectContainer  >
+					<InfoBox >
 						<h1>Breaking Bad Api</h1>
 						<h4>character finder</h4>
 						<p>This project is created with React framework and Breaking Bad Api. Breaking Bad responsive application allows you to search for information about the characters from the Breaking Bad series.</p>
@@ -31,14 +65,20 @@ const Projects = () => {
 					</InfoBox>
 					<ImageBox>
                         <ImageContainer>
-                    <Image src={require('../../../assets/img/breakingbad.png')} alt='logo' width={900} height={616}  
+                    <Image src={require('../../../assets/img/breakingbad.png')} alt='logo' width={900} height={616}   
 					/>
                     </ImageContainer>
                     </ImageBox>
 				</ProjectContainer>
 			</Container>
-			<Container>
-				<ProjectContainer>
+			<Container
+ref={ref2}
+variants={ slideLeft}
+initial='initial'
+custom={{ duration: 1.1 }}
+animate={animationControlsSecond}
+			>
+				<ProjectContainer >
 				<ImageBox>
                         <ImageContainer>
                     <Image src={require('../../../assets/img/foodzy.png')} alt='logo' width={900} height={616}  />
@@ -67,7 +107,13 @@ const Projects = () => {
 					
 				</ProjectContainer>
 			</Container>
-			<Container>
+			<Container
+			ref={ref3}
+			variants={ slideRight}
+			initial='initial'
+			custom={{ duration: 1.1 }}
+			animate={animationControlsThird}
+			>
 				<ProjectContainer>
 					<InfoBox>
 						<h1>SpaceX clone</h1>

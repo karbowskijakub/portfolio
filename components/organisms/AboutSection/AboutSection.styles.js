@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import breakpoints from '../../breakpoints/breakpoints'
 import {TbSquareRotated} from "react-icons/tb"
+import { motion } from 'framer-motion'
 
 export const Wrapper = styled.div`
 display:flex;
@@ -43,7 +44,7 @@ justify-content:center;
 align-items:center;
 
 `
-export const TechStack =styled.div`
+export const TechStack =styled(motion.div)`
 width:100%;
 height:100%;
 grid-row: 2/3;

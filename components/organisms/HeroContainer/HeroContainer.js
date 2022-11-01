@@ -1,31 +1,72 @@
 import React from 'react'
-import {Wrapper,Background,InfoContainer,Container,FirstPa,SecondPa,ThirdPa,ImgContainer,StyledHtml,StyledJs,SymbolsContainer,WaveIcon, InfoContainerMobile,HeroButton} from '../HeroContainer/HeroContainer.styles'
-import {Button} from '../../atoms/Button/Button'
+import {Wrapper,Background,InfoContainer,Container,FirstPa,SecondPa,ThirdPa,ImgContainer,StyledHtml,StyledJs,SymbolsContainer,WaveIcon, InfoContainerMobile,MobileSymbol,StyledHtmlMobile} from '../HeroContainer/HeroContainer.styles'
+import {Button,HeroButton} from '../../atoms/Button/Button'
 import Image from 'next/image'
+import {slideLeft,slideRight,scaleY,scaleUpDown} from '../../animations/animations'
+
+
+
 const HeroContainer = ({isOpen,setOpen}) => {
   return (
     <Wrapper>
         <Container>
-<InfoContainer>
-    <FirstPa>Hello world, <WaveIcon>👋</WaveIcon> I'm </FirstPa>
-    <SecondPa>Jakub Karbowski</SecondPa>
-    <ThirdPa>Frontend Developer</ThirdPa>
-    <HeroButton >Check my projects</HeroButton>
-</InfoContainer>
 
+<InfoContainer 
+ variants={slideLeft}
+ custom={{ delay: 0.5 }}
+ initial='initial'
+ animate='animate'
+>
+    <FirstPa>Hello world, <WaveIcon>👋</WaveIcon> I'm </FirstPa>
+    <SecondPa
+    variants={scaleY}
+    custom={1}
+    initial='initial'
+    animate='animate'
+   
+    >Jakub Karbowski</SecondPa>
+    <ThirdPa>Frontend Developer</ThirdPa>
+    <HeroButton 
+    variants={scaleUpDown}
+    initial='initial'
+    animate='animate'
+    custom={1.5}>Check my projects</HeroButton>
+</InfoContainer>
 
 <Background>
 
-<InfoContainerMobile>
+<InfoContainerMobile
+ variants={slideLeft}
+ custom={{ delay: 0.5 }}
+ initial='initial'
+ animate='animate'
+>
     <FirstPa>Hello world, <WaveIcon>👋</WaveIcon> I'm </FirstPa>
-    <SecondPa>Jakub Karbowski</SecondPa>
+    <SecondPa
+     variants={scaleY}
+     initial='initial'
+     animate='animate'
+     custom={1}
+     >Jakub Karbowski</SecondPa>
     <ThirdPa>Frontend Developer</ThirdPa>
-    <HeroButton className={isOpen ? "active" : null}>Check my projects</HeroButton>
+    <HeroButton
+variants={scaleUpDown}
+initial='initial'
+animate='animate'
+custom={1.5}
+
+     className={isOpen ? "active" : null}>Check my projects</HeroButton>
 </InfoContainerMobile>
 
 
-<ImgContainer>
+<ImgContainer 
+variants={slideRight}
+custom={{ delay: 0.6 }}
+initial='initial'
+animate='animate' >
+
 <Image src={require('../../../assets/img/person-image.png')} alt='logo' width={500} height={512}  />
+
 
 <SymbolsContainer>
 <StyledHtml src={require('../../../assets/img/html-1.svg')} alt='logo' width={150} height={200} />

@@ -3,6 +3,8 @@ import {AiFillLinkedin} from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai';
 import breakpoints from '../../breakpoints/breakpoints'
 
+
+
 export const Wrapper = styled.div`
 display:flex;
 justify-content:center;
@@ -39,6 +41,7 @@ export const LinkedinIcon = styled(AiFillLinkedin)`
 font-size: ${({ theme }) => theme.fontSize.xl};
 margin:0px 15px;
 cursor:pointer;
+color:${({ theme }) => theme.colors.black};
 transition: all 0.3s;
 &:hover{
 	color:${({ theme }) => theme.colors.blue};
@@ -54,6 +57,7 @@ font-size: ${({ theme }) => theme.fontSize.xl};
 margin-right:0.5em;
 cursor:pointer;
 transition: all 0.3s;
+color:${({ theme }) => theme.colors.black};
 &:hover{
 	color:${({ theme }) => theme.colors.blue};
 	transform: scale(1.2)

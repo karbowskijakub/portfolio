@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import {AiFillLinkedin} from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai';
 import breakpoints from '../../breakpoints/breakpoints';
-import {Twirl as Hamburger} from 'hamburger-react'
+import {Twirl as Hamburger} from 'hamburger-react';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled.div`
 	position: fixed;
@@ -58,7 +59,7 @@ export const Nav = styled.nav`
 
 export const LinkedinIcon = styled(AiFillLinkedin)`
 font-size: ${({ theme }) => theme.fontSize.xxl};
-
+color:${({ theme }) => theme.colors.black};
 margin:0px 15px;
 cursor:pointer;
 transition: all 0.3s;
@@ -69,6 +70,7 @@ transition: all 0.3s;
 `
 
 export const GithubIcon = styled(AiFillGithub)`
+color:${({ theme }) => theme.colors.black};
 font-size: ${({ theme }) => theme.fontSize.xxl};
 margin-right:0.5em;
 cursor:pointer;
@@ -79,13 +81,15 @@ transition: all 0.3s;
 }
 
 `
-export const StyledLogo = styled.a`
-font-size: ${({ theme }) => theme.fontSize.xl};
+export const StyledLogo = styled(motion.a)`
+font-size: ${({ theme }) => theme.fontSize.l};
 left:0;
 text-decoration:none;
 margin-left:2em;
 color:black;
-
+@media only screen and ${breakpoints.device.xss}{
+	font-size: ${({ theme }) => theme.fontSize.xl};
+}
 `
 export const IconsWrapper = styled.div`
 display: inline-block;
@@ -96,7 +100,7 @@ z-index:200;
 display:flex;
 align-items:center;
 justify-content:center;
-@media only screen and ${breakpoints.device.xss}{
+@media only screen and ${breakpoints.device.xsss}{
 	display: none;
 }
 @media only screen and ${breakpoints.device.md}{
@@ -107,8 +111,8 @@ export const MobileMenu = styled.div`
 display:flex;
 align-items:center;
 position: fixed;
-	height: 100%;
-	width: 100%;
+	height: 50%;
+	width: 50%;
 	top: 0;
 	 right:0;
 z-index:100;
@@ -215,11 +219,11 @@ justify-content: center;
 
 
 `
-export const Container = styled.div`
+export const Container = styled(motion.div)`
 position:relative;
 width:100%;
 height:100%;
-z-index:10000;
+z-index:20000;
 `
 
 export const StyledLinkMobile = styled.a`
@@ -236,7 +240,7 @@ export const StyledLinkMobile = styled.a`
 `
 export const LinkedinIconMobile = styled(AiFillLinkedin)`
 font-size: ${({ theme }) => theme.fontSize.xxxl};
-
+color:${({ theme }) => theme.colors.black};
 margin:0px 15px;
 cursor:pointer;
 transition: all 0.3s;
@@ -247,6 +251,7 @@ transition: all 0.3s;
 `
 
 export const GithubIconMobile = styled(AiFillGithub)`
+color:${({ theme }) => theme.colors.black};
 font-size: ${({ theme }) => theme.fontSize.xxxl};
 margin-right:0.5em;
 cursor:pointer;

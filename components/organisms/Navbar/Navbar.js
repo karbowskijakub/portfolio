@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { StyledLink, LinkedinIcon, GithubIcon, Wrapper, Nav,StyledLogo,IconsWrapper,Links,HamburgerMenu ,HamburgerDiv ,MobileMenu,LogoDiv, NavBackground, HamburgerMenuBg ,HamburgerDivBg,BgContainer,SecNavBg,WhiteBg, LinksBg,Cont,Container,StyledLinkMobile,LinkedinIconMobile,GithubIconMobile } from './Navbar.styles'
 import { useEffect } from 'react'
-
+import {slideTop,slideBottom} from '../../animations/animations'
 
 const Navbar = ({isOpen,setOpen}) => {
 
@@ -27,10 +27,15 @@ const Navbar = ({isOpen,setOpen}) => {
 	window.addEventListener('scroll', changeNav)
 }, []);
 
-	return (<Container>
+	return (<Container
+		variants={slideTop}
+		custom={2}
+		initial='initial'
+		animate='animate'>
 
 		<NavBackground className={isOpen ? "active" : null}>
-		<LinksBg className={isOpen ? "active" : null}>
+		<LinksBg className={isOpen ? "active" : null}
+		>
                 <Link href='/' passHref>
 					<StyledLinkMobile>About</StyledLinkMobile>
 				</Link>
@@ -42,17 +47,21 @@ const Navbar = ({isOpen,setOpen}) => {
 				</Link>
 				<IconsWrapper>
 				<Link href='https://www.linkedin.com/in/jakub-karbowski-48a254217/' passHref>
+					<a>
 					<LinkedinIconMobile/>
+					</a>
 				</Link>
-				<Link href='https://github.com/karbowskijakub' passHref>
+				<Link href='https://github.com/karbowskijakub' passHref><a>
 					<GithubIconMobile/>
+					</a>
 				</Link>
 				</IconsWrapper>
 			</LinksBg>
 			<WhiteBg className={isOpen ? "active" : null}>
 			<LogoDiv>
 				<Link href='/' passHref>
-					<StyledLogo>Jakub Karbowski</StyledLogo>
+					<StyledLogo
+					>Jakub Karbowski</StyledLogo>
 				</Link>
                 </LogoDiv>
 			<HamburgerDiv>
@@ -68,14 +77,15 @@ const Navbar = ({isOpen,setOpen}) => {
 		
 			<LogoDiv>
 				<Link href='/' passHref>
-					<StyledLogo>Jakub Karbowski</StyledLogo>
+					<StyledLogo
+					>Jakub Karbowski</StyledLogo>
 				</Link>
                 </LogoDiv>
 				<HamburgerDiv>
 <HamburgerMenu toggled={isOpen} rounded toggle={setOpen}> </HamburgerMenu>
 </HamburgerDiv>
 
-<MobileMenu ></MobileMenu>
+
 
                 <Links>
                 <Link href='/' passHref>
@@ -89,10 +99,14 @@ const Navbar = ({isOpen,setOpen}) => {
 				</Link>
 				<IconsWrapper>
 				<Link href='https://www.linkedin.com/in/jakub-karbowski-48a254217/' passHref>
+					<a>
 					<LinkedinIcon/>
+					</a>
 				</Link>
 				<Link href='https://github.com/karbowskijakub' passHref>
+					<a>
 					<GithubIcon/>
+					</a>
 				</Link>
 				</IconsWrapper>
 			</Links>

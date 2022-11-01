@@ -1,13 +1,15 @@
 import styled, {keyframes} from 'styled-components'
 import breakpoints from '../../breakpoints/breakpoints';
 import {Button} from '../../atoms/Button/Button';
-import Image from 'next/image'
+import Image from 'next/image';
+import { motion } from 'framer-motion'
+
 export const Wrapper = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
 width:100%;
-height:900px;
+height:1000px;
 background:${({ theme }) => theme.colors.white};
 `
 export const Background = styled.div`
@@ -24,18 +26,8 @@ right:0;
   min-width:45%;
 }
 
-
-
 `
-export const HeroButton = styled(Button)`
-width:90%;
-@media only screen and ${breakpoints.device.xs}{
-  width:100%;
-}
-&.active{
-  display:none;
-}
-`
+
 
 export const Container = styled.div`
 height:100%;
@@ -57,7 +49,7 @@ position:relative;
 
 `
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled(motion.div)`
 
 text-direction:left;
 display:flex;
@@ -85,7 +77,7 @@ height:60%;
 
 `
 
-export const InfoContainerMobile = styled.div`
+export const InfoContainerMobile = styled(motion.div)`
 
 text-direction:left;
 display:flex;
@@ -119,11 +111,14 @@ font-size:${({ theme }) => theme.fontSize.l};
 }
 @media only screen and ${breakpoints.device.lg}{
   font-size:${({ theme }) => theme.fontSize.xxl};
+  color:${({ theme }) => theme.colors.grey};
+}
+@media only screen and ${breakpoints.device.sm}{
+  color:${({ theme }) => theme.colors.grey};
 }
 
-
 `
-export const SecondPa = styled.h1`
+export const SecondPa = styled(motion.h1)`
 color:${({ theme }) => theme.colors.black};
 font-size:${({ theme }) => theme.fontSize.xl};
 text-transform:uppercase;
@@ -157,11 +152,12 @@ margin-top:0;
 
 `
 
-export const ImgContainer = styled.div`
+export const ImgContainer = styled(motion.div)`
 position:absolute;
-bottom:0;
-display:none;
-
+bottom:10em;
+@media only screen and ${breakpoints.device.xss}{
+  bottom:5em;
+}
 
 @media only screen and ${breakpoints.device.sm}{
   left:-12.5em;
@@ -169,7 +165,11 @@ display:none;
 
 `
 export const SymbolsContainer = styled.div`
+display:none;
 
+@media only screen and ${breakpoints.device.sm}{
+  display:block;
+}
 position:absolute;
 bottom:16em;
 left:14.6em;
@@ -177,12 +177,30 @@ filter: invert(53%) sepia(43%) saturate(5099%) hue-rotate(200deg) brightness(98%
 width:300px;
 height:170px;
 `
+
+
 export const StyledHtml = styled(Image)`
 
 filter: invert(53%) sepia(43%) saturate(3099%) hue-rotate(200deg) brightness(115%) contrast(275%);
 
 
 
+`
+
+export const StyledHtmlMobile = styled(Image)`
+
+filter: invert(53%) sepia(43%) saturate(3099%) hue-rotate(200deg) brightness(115%) contrast(275%);
+
+
+`
+
+
+export const MobileSymbol = styled.div`
+filter: invert(53%) sepia(43%) saturate(5099%) hue-rotate(200deg) brightness(98%) contrast(165%);
+width:90px;
+position:absolute;
+top:9em;
+right:9em;
 `
 export const StyledJs = styled(Image)`
 filter: contrast(145%) ;

@@ -2,10 +2,11 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import {AiFillGithub} from 'react-icons/ai';
 import {AiOutlineLink} from 'react-icons/ai';
-import breakpoints from '../../breakpoints/breakpoints'
+import breakpoints from '../../breakpoints/breakpoints';
+import { motion } from 'framer-motion';
 // import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox} from './Projects.styles'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
 margin-top:4em;
 display:flex;
 justify-content:center;
@@ -15,9 +16,9 @@ flex-direction:column;
 background:#F3F4F6;
 `
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
 margin-bottom:7em;
-width: 100%;
+width: 90%;
 display:flex;
 justify-content:center;
 flex-direction:column;
@@ -26,10 +27,12 @@ padding:0 4em;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius:8px;
 background:${({ theme }) => theme.colors.white};
-@media only screen and ${breakpoints.device.lg}{
+@media only screen and ${breakpoints.device.lgx}{
     width: 1200px;
  }
 `
+
+
 export const TitleContainer = styled.div`
 height:10em;
 display:flex;
@@ -123,12 +126,20 @@ border:none;
 // import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox} from './Projects.styles'
 
 export const TechnologyDiv = styled.div`
+
 span{
+
 margin-right:0.5em;
 border:1px solid grey;
 border-radius:10px;
-font-size:${({ theme }) => theme.fontSize.m};
+font-size:${({ theme }) => theme.fontSize.sm};
 padding:3px 4px;
+
+@media only screen and ${breakpoints.device.xss}{
+    font-size:${({ theme }) => theme.fontSize.m};
+ }
+
+
 }
 color:grey;
 opacity:0.7;

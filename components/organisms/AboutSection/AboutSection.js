@@ -1,8 +1,10 @@
 import React from 'react'
 import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle,ImageStyle,Shape,TwoContainers} from './AboutSection.styles'
-
+import {scaleY} from '../../animations/animations'
+import { useInView } from 'react-intersection-observer'
 
 const AboutSection = () => {
+	const { inView, ref } = useInView({ threshold: 0 })
 	return (
 		<Wrapper>
 			
@@ -24,10 +26,15 @@ const AboutSection = () => {
 				</InfoContainer>
 <TechContainer>
     <StackTitle>Tech Stack</StackTitle>
-				<TechStack>
-                <Element>
-						<IconContainer>
-                        <ImageStyle src={require('../../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
+				<TechStack
+				variants={scaleY}
+				initial='initial'
+				animate={inView && 'animate'}
+				inView={inView}
+				>
+                <Element ref={ref}>
+						<IconContainer >
+                        <ImageStyle  src={require('../../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
                         </IconContainer>
 						<ParagraphContainer>
 							<p>Javascript</p>

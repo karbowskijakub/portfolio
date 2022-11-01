@@ -1,5 +1,5 @@
 import React from 'react'
-import {Wrapper,Container,StyledLogo,IconsWrapper,GithubIcon,LinkedinIcon,Background} from './Footer.styles'
+import {Wrapper,Container,StyledLogo,IconsWrapper,GithubIcon,LinkedinIcon,Background,StyLi} from './Footer.styles'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -8,11 +8,14 @@ const Footer = () => {
         <Container>
             <StyledLogo>Created By Jakub Karbowski</StyledLogo>
             <IconsWrapper>
-				<Link href='https://www.linkedin.com/in/jakub-karbowski-48a254217/' passHref>
-					<LinkedinIcon/>
+				<Link href='https://www.linkedin.com/in/jakub-karbowski-48a254217/' passHref ><a>
+					<LinkedinIcon />
+          </a>
 				</Link>
-				<Link href='https://github.com/karbowskijakub' passHref>
+				<Link href='https://github.com/karbowskijakub' passHref >
+          <a>
 					<GithubIcon/>
+          </a>
 				</Link>
 				</IconsWrapper>
                 <Background />

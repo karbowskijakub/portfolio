@@ -27,7 +27,7 @@ button {
     padding:1em 2em;
     width:100% ;
   }
-
+height:2.5em;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -107,7 +107,7 @@ width:100%;
 
 `
 export const InputBlock = styled.div`
-min-height:5em;
+min-height:6em;
 width:100%;
 
 `
