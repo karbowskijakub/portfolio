@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
- const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
@@ -23,8 +23,14 @@ import { createGlobalStyle } from 'styled-components';
   html,
 body,
 #root {
-
+  scroll-behavior: smooth;
     overflow-x: hidden;
 }
-`;
-export default GlobalStyles;
+#portfolio{
+  scroll-margin-top: 40px;
+}
+#about{
+  scroll-margin-top: 150px;
+}
+`
+export default GlobalStyles
