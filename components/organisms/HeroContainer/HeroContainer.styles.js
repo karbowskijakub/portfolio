@@ -78,7 +78,7 @@ height:60%;
 `
 
 export const InfoContainerMobile = styled(motion.div)`
-
+margin-bottom:0em;
 text-direction:left;
 display:flex;
 justify-content:center;
@@ -87,6 +87,10 @@ padding: 0 3em;
 height:60%;
 min-width:30%;
 display:block;
+@media only screen and ${breakpoints.device.xs}{
+  margin-bottom:14em;
+}
+
 @media only screen and ${breakpoints.device.lg}{
   font-size:${({ theme }) => theme.fontSize.xxl};
   
@@ -154,6 +158,7 @@ margin-top:0;
 
 export const ImgContainer = styled(motion.div)`
 position:absolute;
+display:none;
 bottom:10em;
 @media only screen and ${breakpoints.device.xss}{
   bottom:5em;
@@ -161,6 +166,20 @@ bottom:10em;
 
 @media only screen and ${breakpoints.device.sm}{
   left:-12.5em;
+  display:block;
+}
+
+`
+export const ImgContainerMobile = styled(motion.div)`
+position:absolute;
+
+@media only screen and ${breakpoints.device.xss}{
+  bottom:5em;
+}
+
+@media only screen and ${breakpoints.device.sm}{
+
+  display:none;
 }
 
 `

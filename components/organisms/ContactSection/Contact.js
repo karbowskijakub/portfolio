@@ -18,7 +18,7 @@ const Contact = () => {
 					<ContactBox>
 		<Form/>
 						<ImageDiv>
-                        <Image src={require('../../../assets/img/mail.png')} alt='logo' width={900} height={1000} />
+                        <Image src={require('../../../assets/img/mail.png')} alt='logo' layout="responsive" objectFit="cover" />
                         </ImageDiv>
 					</ContactBox>
 				</ContactDiv>

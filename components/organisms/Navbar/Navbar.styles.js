@@ -16,12 +16,10 @@ export const Wrapper = styled.div`
 	overflow: hidden;
 	background-color: none;
 	&.active {
-
 		background: rgba(0,0,0,0.3);
 		backdrop-filter: blur(5px);
 	}
 	&.white {
-
 		background: white;
 		
 	}
@@ -36,7 +34,6 @@ z-index:20000;
 }
 `
 export const StyledLink = styled.a`
-
 	padding: 0rem 2rem;
 	text-decoration:none;
 	color:black;
@@ -48,7 +45,6 @@ export const StyledLink = styled.a`
 	}
 `
 export const Nav = styled.nav`
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -79,7 +75,6 @@ transition: all 0.3s;
 	color:${({ theme }) => theme.colors.blue};
 	transform: scale(1.2)
 }
-
 `
 export const StyledLogo = styled(motion.a)`
 font-size: ${({ theme }) => theme.fontSize.l};
@@ -93,7 +88,6 @@ color:black;
 `
 export const IconsWrapper = styled.div`
 display: inline-block;
-
 `
 export const Links =styled.div`
 z-index:200;
@@ -121,7 +115,6 @@ z-index:100;
 	
 `
 export const LogoDiv = styled.div`
-
 z-index:200
 `
 export const NavBackground = styled.div`
@@ -135,10 +128,7 @@ height:100%;
 	top: 0;
 	 right:0;
 z-index:20;
-
 	transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
-
-
 	overflow: hidden;
 	
 background:${({ theme }) => theme.colors.blue};;
@@ -148,25 +138,16 @@ opacity:0;
 	opacity:1;
 	transform:translateX(0%);
 }
-
-
-
 `
 
 export const HamburgerMenuBg = styled(Hamburger)`
-
 `
 export const HamburgerDivBg = styled.div`
-
-
-
-
 @media only screen and ${breakpoints.device.md}{
 	display: none;
 }
 `
 export const BgContainer =styled.div`
-
 position:relative;
 width:100%;
 height:100%;
@@ -191,7 +172,6 @@ align-items:center;
 	}
 `
 export const LinksBg = styled.div`
-
 width:300px;
 height:300px;
 z-index:20000;
@@ -200,24 +180,18 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content: center;
-
-
 opacity:0;
 &.active {
 opacity:1;
-
 }
 `
 export const Cont = styled.div`
-
 z-index:20000;
 font-size:30px;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content: center;
-
-
 `
 export const Container = styled(motion.div)`
 position:relative;
@@ -227,7 +201,6 @@ z-index:20000;
 `
 
 export const StyledLinkMobile = styled.a`
-
 	padding: 1rem 2rem;
 	text-decoration:none;
 	color:black;
@@ -260,5 +233,4 @@ transition: all 0.3s;
 	color:${({ theme }) => theme.colors.white};
 	transform: scale(1.2)
 }
-
 `

@@ -1,9 +1,9 @@
 import React from 'react'
-import {Wrapper,Background,InfoContainer,Container,FirstPa,SecondPa,ThirdPa,ImgContainer,StyledHtml,StyledJs,SymbolsContainer,WaveIcon, InfoContainerMobile,MobileSymbol,StyledHtmlMobile} from '../HeroContainer/HeroContainer.styles'
+import {Wrapper,Background,InfoContainer,Container,FirstPa,SecondPa,ThirdPa,ImgContainer,StyledHtml,StyledJs,SymbolsContainer,WaveIcon, InfoContainerMobile,MobileSymbol,StyledHtmlMobile, ImgContainerMobile} from '../HeroContainer/HeroContainer.styles'
 import {Button,HeroButton} from '../../atoms/Button/Button'
 import Image from 'next/image'
 import {slideLeft,slideRight,scaleY,scaleUpDown} from '../../animations/animations'
-
+import {breaking} from '../../../assets/img/breakingbad.png'
 
 
 const HeroContainer = ({isOpen,setOpen}) => {
@@ -58,6 +58,15 @@ custom={1.5}
      className={isOpen ? "active" : null}>Check my projects</HeroButton>
 </InfoContainerMobile>
 
+<ImgContainerMobile 
+variants={slideRight}
+custom={{ delay: 0.6 }}
+initial='initial'
+animate='animate' >
+
+<Image src={require('../../../assets/img/person-image.png')} alt='logo'  objectFit="cover" />
+
+</ImgContainerMobile>
 
 <ImgContainer 
 variants={slideRight}

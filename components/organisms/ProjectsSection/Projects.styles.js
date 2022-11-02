@@ -57,7 +57,7 @@ overflow:hidden;
 `
 export const InfoBox = styled.div`
 padding:3em 2em;
-max-width:400px;
+width:100%:
 h1{
     margin:0;
 }
@@ -69,6 +69,9 @@ opacity:0.5;
 p{
     margin-top:2em;
 }
+@media only screen and ${breakpoints.device.md}{
+    width:40%;
+ }
 `
 export const ButtonsBox = styled.div`
 margin-top:6em;
@@ -154,13 +157,15 @@ width:100%;
 height:100%;
 padding:3em 0;
 
+
 `
 export const ImageContainer = styled.div`
-
+display:block;
 width:100%;
 height:100%;
 border-radius:10px;
 overflow:hidden;
+
 
 `
 

@@ -2,9 +2,14 @@ import React from 'react'
 import { Wrapper, Container, Title, InfoContainer, TechStack,Element,IconContainer,ParagraphContainer,TechContainer,StackTitle,ImageStyle,Shape,TwoContainers} from './AboutSection.styles'
 import {scaleY} from '../../animations/animations'
 import { useInView } from 'react-intersection-observer'
+import {  useAnimation } from 'framer-motion'
 
 const AboutSection = () => {
+	const animationControls = useAnimation()
 	const { inView, ref } = useInView({ threshold: 0 })
+	if (inView) {
+		animationControls.start('animate')
+	  }
 	return (
 		<Wrapper>
 			
@@ -29,10 +34,10 @@ const AboutSection = () => {
 				<TechStack
 				variants={scaleY}
 				initial='initial'
-				animate={inView && 'animate'}
-				inView={inView}
+				animate={animationControls}
+				ref={ref}
 				>
-                <Element ref={ref}>
+                <Element >
 						<IconContainer >
                         <ImageStyle  src={require('../../../assets/img/IconsAbout/js.svg')} alt='logo' width={52} height={52} />
                         </IconContainer>

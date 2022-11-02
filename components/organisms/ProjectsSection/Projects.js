@@ -29,8 +29,7 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 
 
 	return (
-		
-		<Wrapper
+        <Wrapper
 
 		>
             <TitleContainer>
@@ -50,11 +49,9 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 						<p>This project is created with React framework and Breaking Bad Api. Breaking Bad responsive application allows you to search for information about the characters from the Breaking Bad series.</p>
 						<ButtonsBox>
 							<ButtonsDiv>
-								<Link 
-								href='https://karbowskijakub.github.io/breaking-bad-api/'>
+								<Link href='https://karbowskijakub.github.io/breaking-bad-api/' >
 								<FirstButton>Live<Share/></FirstButton></Link>
-								<Link 
-								href='https://github.com/karbowskijakub/breaking-bad-api'>
+								<Link href='https://github.com/karbowskijakub/breaking-bad-api' >
 								<SecondButton>Code<GitHub/></SecondButton></Link>
 							</ButtonsDiv>
                             <TechnologyDiv>
@@ -65,7 +62,7 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 					</InfoBox>
 					<ImageBox>
                         <ImageContainer>
-                    <Image src={require('../../../assets/img/breakingbad.png')} alt='logo' width={900} height={616}   
+                    <Image src={require('../../../assets/img/breakingbad.png')} alt='logo'   layout="responsive" objectFit="cover"
 					/>
                     </ImageContainer>
                     </ImageBox>
@@ -81,7 +78,7 @@ animate={animationControlsSecond}
 				<ProjectContainer >
 				<ImageBox>
                         <ImageContainer>
-                    <Image src={require('../../../assets/img/foodzy.png')} alt='logo' width={900} height={616}  />
+                    <Image src={require('../../../assets/img/foodzy.png')} alt='logo' layout="responsive" objectFit="cover"  />
                     </ImageContainer>
                     </ImageBox>
 					<InfoBox>
@@ -90,11 +87,11 @@ animate={animationControlsSecond}
 						<p>This project was created to check my UI skills and to get practice with the new Next.js technology.</p>
 						<ButtonsBox>
 							<ButtonsDiv>
-							<Link 
-								href='https://foodzy-landing-page.vercel.app/'>
+							<Link href='https://foodzy-landing-page.vercel.app/' >
 								<FirstButton>Live<Share/></FirstButton></Link>
-								<Link 
-								href='https://github.com/karbowskijakub/foodzy-landing-page'>
+								<Link
+                                    href='https://github.com/karbowskijakub/foodzy-landing-page'
+                                    >
 								<SecondButton>Code<GitHub/></SecondButton></Link>
 							</ButtonsDiv>
                             <TechnologyDiv>
@@ -121,11 +118,13 @@ animate={animationControlsSecond}
 						<p>This project is created with HTML, CSS & JS. While working on it, I tested my skills mainly with css.</p>
 						<ButtonsBox>
 							<ButtonsDiv>
-							<Link 
-								href='https://karbowskijakub.github.io/spacex-website-clone/'>
+							<Link
+                                href='https://karbowskijakub.github.io/spacex-website-clone/'
+                                >
 								<FirstButton>Live<Share/></FirstButton></Link>
-								<Link 
-								href='https://github.com/karbowskijakub/spacex-website-clone'>
+								<Link
+                                    href='https://github.com/karbowskijakub/spacex-website-clone'
+                                    >
 								<SecondButton>Code<GitHub/></SecondButton></Link>
 							</ButtonsDiv>
                             <TechnologyDiv>
@@ -137,13 +136,13 @@ animate={animationControlsSecond}
 					</InfoBox>
 					<ImageBox>
                         <ImageContainer>
-                    <Image src={require('../../../assets/img/spacex.png')} alt='logo' width={900} height={616}  />
+                    <Image src={require('../../../assets/img/spacex.png')} alt='logo' layout="responsive" objectFit="cover"  />
                     </ImageContainer>
                     </ImageBox>
 				</ProjectContainer>
 			</Container>
 		</Wrapper>
-	)
+    );
 }
 
 export default Projects
