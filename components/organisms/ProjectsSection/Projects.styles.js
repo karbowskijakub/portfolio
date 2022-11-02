@@ -42,7 +42,7 @@ align-items:center;
 
 // import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox} from './Projects.styles'
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled(motion.div)`
 display:flex;
 flex-direction:column;
 background:${({ theme }) => theme.colors.white};

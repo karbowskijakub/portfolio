@@ -36,13 +36,14 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 					<h1>Projects</h1>
 				</TitleContainer>
 			<Container 
-			ref={ref}
-			variants={ slideRight}
-			initial='initial'
-			custom={{ duration: 1.1 }}
-			animate={animationControls}
+		
 	>
-				<ProjectContainer  >
+				<ProjectContainer 
+					ref={ref}
+					variants={ slideRight}
+					initial='initial'
+					custom={{ duration: 1.1 }}
+					animate={animationControls} >
 					<InfoBox >
 						<h1>Breaking Bad Api</h1>
 						<h4>character finder</h4>
@@ -69,13 +70,14 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 				</ProjectContainer>
 			</Container>
 			<Container
-ref={ref2}
-variants={ slideLeft}
-initial='initial'
-custom={{ duration: 1.1 }}
-animate={animationControlsSecond}
+
 			>
-				<ProjectContainer >
+				<ProjectContainer 
+				ref={ref2}
+				variants={ slideLeft}
+				initial='initial'
+				custom={{ duration: 1.1 }}
+				animate={animationControlsSecond}>
 				<ImageBox>
                         <ImageContainer>
                     <Image src={require('../../../assets/img/foodzy.png')} alt='logo' layout="responsive" objectFit="cover"  />
@@ -105,13 +107,14 @@ animate={animationControlsSecond}
 				</ProjectContainer>
 			</Container>
 			<Container
-			ref={ref3}
-			variants={ slideRight}
-			initial='initial'
-			custom={{ duration: 1.1 }}
-			animate={animationControlsThird}
+			
 			>
-				<ProjectContainer>
+				<ProjectContainer
+				ref={ref3}
+				variants={ slideRight}
+				initial='initial'
+				custom={{ duration: 1.1 }}
+				animate={animationControlsThird}>
 					<InfoBox>
 						<h1>SpaceX clone</h1>
 						<h4>multi-page website</h4>
