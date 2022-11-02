@@ -2,7 +2,7 @@ import React from 'react'
 import { Wrapper, Container, TitleContainer,ProjectContainer,InfoBox,ButtonsBox,ButtonsDiv,FirstButton,SecondButton,TechnologyDiv,ImageBox,ImageContainer,Share,GitHub} from './Projects.styles'
 import Image from 'next/image'
 import Link from 'next/link'
-import {slideLeft,slideRight} from '../../animations/animations';
+import {slideLeft,slideRight,ScaleY} from '../../animations/animations';
 import { useInView } from 'react-intersection-observer';
 import {  useAnimation } from 'framer-motion'
 const Projects = () => {
@@ -43,7 +43,7 @@ const [ref3, inView3 ] = useInView({ threshold: 0.5 })
 					variants={ slideRight}
 					initial='initial'
 					custom={{ duration: 1.1 }}
-					animate={animationControls} >
+					animate={ animationControls} >
 					<InfoBox >
 						<h1>Breaking Bad Api</h1>
 						<h4>character finder</h4>
