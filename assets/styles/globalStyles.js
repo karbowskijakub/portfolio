@@ -19,15 +19,11 @@ import { createGlobalStyle } from 'styled-components';
   a, button {
     font-family: 'Montserrat', sans-serif;
   }
-  
+
   html,
 body,
 #root {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    /* Prevents overflow on the x-axis */
+
     overflow-x: hidden;
 }
 `;

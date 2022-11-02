@@ -16,6 +16,7 @@ const Navbar = ({isOpen,setOpen}) => {
 		
 		if(window.scrollY >= 90 ){
 			setNavbar(true)
+			console.log(navbar)
 		}
 		
 		else
