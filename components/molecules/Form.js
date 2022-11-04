@@ -19,7 +19,7 @@ const Form = () => {
 	const handleChange = (e) => setValues({ ...values, [e.target.name]: e.target.value })
 	const onSubmit = async (e) => {
 		try {
-			await fetch('/api/contact', {
+			await fetch('http://localhost:3000/api/contact', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
