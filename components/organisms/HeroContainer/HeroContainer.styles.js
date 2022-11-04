@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 1000px;
+	height: 800px;
 	background: ${({ theme }) => theme.colors.white};
 `
 export const Background = styled.div`
@@ -81,7 +81,7 @@ export const InfoContainerMobile = styled(motion.div)`
 	min-width: 30%;
 	display: block;
 	@media only screen and ${breakpoints.device.xs} {
-		margin-bottom: 14em;
+		margin-bottom: 0em;
 	}
 
 	@media only screen and ${breakpoints.device.lg} {
@@ -96,7 +96,7 @@ export const FirstPa = styled.h2`
 	color: ${({ theme }) => theme.colors.white};
 	font-size: ${({ theme }) => theme.fontSize.l};
 
-	@media only screen and ${breakpoints.device.xs} {
+	@media only screen and ${breakpoints.device.md} {
 		font-size: ${({ theme }) => theme.fontSize.xl};
 		color: ${({ theme }) => theme.colors.white};
 	}
@@ -114,7 +114,7 @@ export const SecondPa = styled(motion.h1)`
 	text-transform: uppercase;
 	margin-bottom: 0;
 	margin-top: 0;
-	@media only screen and ${breakpoints.device.xs} {
+	@media only screen and ${breakpoints.device.md} {
 		font-size: ${({ theme }) => theme.fontSize.xxl};
 	}
 
@@ -132,8 +132,8 @@ export const ThirdPa = styled.h2`
 	@media only screen and ${breakpoints.device.lg} {
 		font-size: ${({ theme }) => theme.fontSize.xxl};
 	}
-	@media only screen and ${breakpoints.device.xs} {
-		font-size: ${({ theme }) => theme.fontSize.xxl};
+	@media only screen and ${breakpoints.device.md} {
+		font-size: ${({ theme }) => theme.fontSize.xl};
 	}
 `
 
@@ -153,13 +153,27 @@ export const ImgContainer = styled(motion.div)`
 export const ImgContainerMobile = styled(motion.div)`
 	position: absolute;
 
+
+	
+
+	@media only screen and ${breakpoints.device.xs} {
+		bottom: 8em;
+	}
+
+	@media only screen and ${breakpoints.device.xsss} {
+		bottom: 6em;
+	}
+
 	@media only screen and ${breakpoints.device.xss} {
-		bottom: 5em;
+		bottom: 0em;
 	}
 
 	@media only screen and ${breakpoints.device.sm} {
 		display: none;
 	}
+	@media only screen and (min-width: 650px) {
+		bottom:-7em;
+	  }
 `
 export const SymbolsContainer = styled.div`
 	display: none;
