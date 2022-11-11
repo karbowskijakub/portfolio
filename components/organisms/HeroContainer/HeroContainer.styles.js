@@ -76,7 +76,7 @@ export const InfoContainerMobile = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 3em;
+	padding: 0 2em;
 	height: 60%;
 	min-width: 30%;
 	display: block;

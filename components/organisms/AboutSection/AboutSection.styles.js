@@ -61,10 +61,12 @@ export const InfoContainer = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 0 4em;
+	flex-direction:column;
 	font-size: ${({ theme }) => theme.fontSize.l};
 
 	@media only screen and ${breakpoints.device.lg} {
-		width: 400px;
+		width: 600px;
+		align-items: flex-start;
 	}
 `
 

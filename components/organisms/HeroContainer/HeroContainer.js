@@ -35,9 +35,11 @@ const HeroContainer = ({ isOpen, setOpen }) => {
 						Jakub Karbowski
 					</SecondPa>
 					<ThirdPa>Frontend Developer</ThirdPa>
-					<HeroButton href='#portfolio' variants={scaleUpDown} initial='initial' animate='animate' custom={1.5}>
+					<Link href='#portfolio'>
+					<HeroButton  variants={scaleUpDown} initial='initial' animate='animate' custom={1.5}>
 						Check my projects
 					</HeroButton>
+					</Link>
 				</InfoContainer>
 
 				<Background>

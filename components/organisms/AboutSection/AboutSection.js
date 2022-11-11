@@ -14,6 +14,7 @@ import {
 	Shape,
 	TwoContainers,
 } from './AboutSection.styles'
+import AboutText from '../../atoms/AboutText/AboutText'
 import { scaleY } from '../../animations/animations'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
@@ -33,13 +34,7 @@ const AboutSection = () => {
 				</Title>
 				<TwoContainers>
 					<InfoContainer>
-						<p>
-							tempus lectus in leo mollis ultricies. Phasellus tristique massa non faucibus feugiat. tempus lectus in
-							leo mollis ultricies. Phasellus tristique massa non faucibus feugiat. tempus lectus in leo mollis
-							ultricies. Phasellus tristique massa non faucibus feugiat. tempus lectus in leo mollis ultricies.
-							Phasellus tristique massa non faucibus feugiat. tempus lectus in leo mollis ultricies. Phasellus tristique
-							massa non faucibus feugiat.
-						</p>
+						<AboutText/>
 					</InfoContainer>
 					<TechContainer>
 						<StackTitle>Tech Stack</StackTitle>

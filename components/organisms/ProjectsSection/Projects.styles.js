@@ -128,13 +128,14 @@ export const TechnologyDiv = styled.div`
 		font-size: ${({ theme }) => theme.fontSize.sm};
 		padding: 3px 4px;
 
-		@media only screen and ${breakpoints.device.xss} {
+		@media  (min-width: 1280px) {
 			font-size: ${({ theme }) => theme.fontSize.m};
 		}
 	}
 	color: grey;
 	opacity: 0.7;
 `
+
 export const ImageBox = styled.div`
 	display: flex;
 	justify-content: center;
