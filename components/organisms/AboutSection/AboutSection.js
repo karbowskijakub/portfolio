@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
 	Wrapper,
 	Container,
@@ -22,9 +22,12 @@ import { useAnimation } from 'framer-motion'
 const AboutSection = () => {
 	const animationControls = useAnimation()
 	const { inView, ref } = useInView({ threshold: 0 })
-	if (inView) {
-		animationControls.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	
 	return (
 		<Wrapper id='about'>
 			<Container>

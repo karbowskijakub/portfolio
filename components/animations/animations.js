@@ -53,7 +53,7 @@ const scaleUpDown = {
 	}),
 }
 const slideTop = {
-	initial: { y: -50, opacity: 0 },
+	initial: { y: -30, opacity: 0 },
 	animate: (delay = 0) => ({
 		y: 0,
 		opacity: 1,

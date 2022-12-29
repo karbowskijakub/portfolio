@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillGithub } from 'react-icons/ai'
 import breakpoints from '../../breakpoints/breakpoints'
-import { Twirl as Hamburger } from 'hamburger-react'
+import { Cross as Hamburger } from 'hamburger-react'
 import { motion } from 'framer-motion'
 
 export const Wrapper = styled.div`

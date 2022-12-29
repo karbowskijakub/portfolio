@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
 	Wrapper,
 	Container,
@@ -28,15 +28,21 @@ const Projects = () => {
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	}, [animationControlsThird, inView3])
 
 	return (
 		<Wrapper id='portfolio'>
@@ -99,25 +105,24 @@ const Projects = () => {
 					animate={animationControlsSecond}>
 					<ImageBox>
 						<ImageContainer>
-							<Image src={require('../../../assets/img/foodzy.png')} alt='logo' layout='responsive' objectFit='cover' />
+							<Image src={require('../../../assets/img/cryptoenth.png')} alt='logo' layout='responsive' objectFit='cover' />
 						</ImageContainer>
 					</ImageBox>
 					<InfoBox>
-						<h1>Foodzy Landing Page</h1>
+						<h1>CryptoEnth</h1>
 						<h4>landing page</h4>
 						<p>
-							This project was created to check my UI skills and to get practice with the new Next.js technology. I also
-							learned the basics of framer library
+						This project is created with Next.js. To manage data I've chosen Contentful, which is a headless CMS.To make this site easy to customize, it uses webhooks that allow me to re-build this site every time I publish something new to Contentful.
 						</p>
 						<ButtonsBox>
 							<ButtonsDiv>
-								<Link href='https://foodzy-landing-page.vercel.app/'>
+								<Link href='https://cryptoenth.vercel.app/'>
 									<FirstButton>
 										Live
 										<Share />
 									</FirstButton>
 								</Link>
-								<Link href='https://github.com/karbowskijakub/foodzy-landing-page'>
+								<Link href='https://github.com/karbowskijakub/crypto-landing'>
 									<SecondButton>
 										Code
 										<GitHub />
@@ -127,7 +132,7 @@ const Projects = () => {
 							<TechnologyDiv>
 								<span>Next.js</span>
 								<span>Framer</span>
-								<span>styled-components</span>
+								<span>MUI</span>
 							</TechnologyDiv>
 						</ButtonsBox>
 					</InfoBox>

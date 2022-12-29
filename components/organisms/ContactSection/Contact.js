@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect } from 'react'
 import Form from '../../molecules/Form'
 import {
 	Wrapper,
@@ -25,9 +25,12 @@ import { useAnimation } from 'framer-motion'
 const Contact = () => {
 	const animationControls = useAnimation()
 	const { inView, ref } = useInView({ threshold: 0 })
-	if (inView) {
-		animationControls.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	
 	return (
 		<Wrapper id='contact'>
 			<Container>
